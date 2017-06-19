@@ -1,0 +1,12 @@
+.voter{
+	font-size: 30px;
+	width: 10px;
+	margin-left: 10%;
+	color: #ccc;
+}
+i{
+	cursor : pointer;
+} 
+span{
+	margin-left: 50%;
+}
