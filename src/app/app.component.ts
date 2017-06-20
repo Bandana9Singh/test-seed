@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 
 import { CoursesComponent } from './courses.component';
 import { AuthorComponent } from './author.component';
-import { FavouriteComponent } from './favourite.component';
-import { LikeComponent } from './like.component';
+import { FavouriteComponent } from './favourite/favourite.component';
+import { LikeComponent } from './like/like.component';
 import { VoterComponent } from './voter/voter.component';
+import { TwitterComponent } from './twitter/twitter.component';
 
 @Component({
   selector: 'app-root',
@@ -41,7 +42,7 @@ import { VoterComponent } from './voter/voter.component';
       <br>
       <like [is-like]="like.isLike" [num]="like.num"></like>
       <br>
-      <app-voter [up-vote]="voter.upVote" [down-vote]="voter.downVote" [vote]="voter.vote"></app-voter>
+      <app-voter [vote-count]="voter.voteCount" [my-vote]="voter.myVote" (changeVote)="onVoterChange($event)"></app-voter>
     `
 })
 export class AppComponent {	title = "My first Angular App";
@@ -66,8 +67,10 @@ export class AppComponent {	title = "My first Angular App";
     num : 10
   }
   voter = {
-    upVote : false,
-    downVote : false,
-    vote :10
+    voteCount : 10,
+    myVote : 0
+  }
+  onVoterChange($event){
+    console.log($event);
   }
 }

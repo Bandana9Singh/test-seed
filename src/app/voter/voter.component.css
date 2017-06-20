@@ -1,12 +1,10 @@
 .voter{
 	font-size: 30px;
-	width: 10px;
+	width: 32px;
 	margin-left: 10%;
 	color: #ccc;
+	text-align: center;
 }
 i{
 	cursor : pointer;
-} 
-span{
-	margin-left: 50%;
 }

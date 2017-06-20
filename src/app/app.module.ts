@@ -6,8 +6,8 @@ import { AppComponent } from './app.component';
 
 import { CoursesComponent } from './courses.component';
 import { AuthorComponent } from './author.component';
-import { FavouriteComponent } from './favourite.component';
-import { LikeComponent } from './like.component';
+import { FavouriteComponent } from './favourite/favourite.component';
+import { LikeComponent } from './like/like.component';
 import { TwitterComponent } from './twitter/twitter.component';
 import { VoterComponent } from './voter/voter.component';
 
@@ -18,8 +18,8 @@ import { VoterComponent } from './voter/voter.component';
     AuthorComponent,
     FavouriteComponent,
     LikeComponent,
-    TwitterComponent,
-    VoterComponent
+    VoterComponent,
+    TwitterComponent
   ],
   imports: [
     BrowserModule,

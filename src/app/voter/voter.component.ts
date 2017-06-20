@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-voter',
@@ -6,10 +6,25 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./voter.component.css']
 })
 export class VoterComponent{
-	@Input('up-vote') upVote = false;
-	@Input('down-vote') downVote = false;
-	@Input('vote') vote = 10;
-	isVoter(){
-		this.upVote = true;
+	@Input('vote-count') voteCount=0;
+	@Input('my-vote') myVote=0;
+
+	@Output() changeVote = new EventEmitter();
+
+	upVote(){
+		if(this.myVote==1){
+			console.log("Already upvoted");
+			return;
+		}	
+		this.myVote = this.myVote + 1;
+		this.changeVote.emit({ myVote : this.myVote});
+	}
+	downVote(){
+		if(this.myVote==-1){
+			console.log("Already downvoted");
+			return;
+		}		
+		this.myVote=this.myVote - 1;
+		this.changeVote.emit({ myVote : this.myVote});
 	}
 }
