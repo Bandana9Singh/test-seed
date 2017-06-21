@@ -6,7 +6,6 @@ import {Component,Input} from '@angular/core';
 	styles: [`
 			.like{
 				font-size : 30px;
-				margin-left: 10%;
 			}
 			.glyphicon-heart{
 				cursor:pointer;

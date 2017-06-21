@@ -1,3 +1,15 @@
-<p>
-  twitter works!
-</p>
+<div class="media" *ngFor="let tweet of tweets">
+    <div class="media-left">
+        <a href="#">
+        <img class="media-object" src="{{tweet.img_url}}" alt="image not loaded">
+        </a>
+    </div>
+    <div class="media-body">
+        <div class="media-user">
+            <h4 class="media-heading">{{tweet.name}}</h4>
+            <a href="#">{{tweet.handle}}</a>
+        </div>    
+        <p>{{tweet.message}}</p>
+        <like></like>
+    </div>
+</div>

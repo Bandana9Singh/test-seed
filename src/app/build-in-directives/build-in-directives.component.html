@@ -1,0 +1,52 @@
+<!-- * is a syntactic sugar that tells angular to terat the element as a template
+	If not, then do:
+	'bind the ngForOf we want to iterate'
+	<template ngFor [ngForOf]="courses" #course #i=index>
+		<li>{{ i + 1 }} - {{ course }}</li>
+	</template> 
+ -->
+
+<!-- expression inside quotes-->
+<!-- ngIf will not create the element in DOM
+	 For large element trees
+ -->
+<div *ngIf="courses.length > 0">
+	List of courses
+</div>
+<div *ngIf="courses.length == 0">
+	You dont have any courses yet
+</div>
+<!-- hidden will crete the element in DOM and add attribute hidden to it.
+	 Better for small element trees.
+	 Prefer [hidden] if constructing elemtnt tree is costly.
+	 Eg:Repeatedly constructing DOM on click 
+-->
+<div [hidden]="course.length == 0">
+	List of courses
+</div>
+<div [hidden]="course.length > 0">
+	You dont have any courses yet
+</div>
+
+<!-- ngSwitch -->
+<ul class="nav nav-pills"> 
+	<!-- Bootstrap requires the li that represents the current tab to have the class active -->
+	<li [class.active]="viewMode == 'map'"><a (click)="viewMode = 'map'">Map View</a></li>
+	<li [class.active]="viewMode == 'list'"><a (click)="viewMode = 'list'">List View</a></li>
+</ul>
+<div [ngSwitch]="viewMode">
+	<!-- template is HTML 5 tag, by default its hidden until activated-->
+	<!-- if value of viewMode=map first templte is activated. For viewMode=list, second template is activated -->
+	<template *ngSwitchCase="'map'" ngSwitchDefault>Map View Content</template>
+	<template *ngSwitchCase="'list'">List View Content</template>
+</div>
+
+<!-- ngFor -->
+<ul>
+	<!-- local variable indicated by # or in final version use let
+		 We get access to a variable index 
+	 -->
+	<li *ngFor="let course of courses , let i = index">
+		{{ i + 1 }} - {{ course }} 
+	</li>
+</ul>

@@ -8,8 +8,10 @@ import { CoursesComponent } from './courses.component';
 import { AuthorComponent } from './author.component';
 import { FavouriteComponent } from './favourite/favourite.component';
 import { LikeComponent } from './like/like.component';
-import { TwitterComponent } from './twitter/twitter.component';
 import { VoterComponent } from './voter/voter.component';
+import { TwitterComponent } from './twitter/twitter.component';
+import { BuildInDirectivesComponent } from './build-in-directives/build-in-directives.component';
+import { PipeComponent } from './pipe/pipe.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { VoterComponent } from './voter/voter.component';
     FavouriteComponent,
     LikeComponent,
     VoterComponent,
-    TwitterComponent
+    TwitterComponent,
+    BuildInDirectivesComponent,
+    PipeComponent
   ],
   imports: [
     BrowserModule,
