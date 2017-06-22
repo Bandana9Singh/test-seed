@@ -1,2 +1,18 @@
-<i class="glyphicon" [class.glyphicon-star-empty]="!isFavourite" [class.glyphicon-star]="isFavourite" (click)="toggleIcon()">
+<!--
+<i
+	class="glyphicon" 
+	[class.glyphicon-star-empty]="!isFavourite" 
+	[class.glyphicon-star]="isFavourite" 
+	(click)="toggleIcon()">
+</i>
+Class binding can be a bit noisy if we adding/removing multiple classes.
+we can use ngClass directive	
+-->
+<i 
+	class="glyphicon"
+	[ngClass]="{
+		'glyphicon-star-empty':!isFavourite,
+		'glyphicon-star':isFavourite
+	}"
+	(click)="toggleIcon()">
 </i>

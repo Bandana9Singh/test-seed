@@ -13,6 +13,8 @@ import { TwitterComponent } from './twitter/twitter.component';
 import { BuildInDirectivesComponent } from './build-in-directives/build-in-directives.component';
 import { PipeComponent } from './pipe/pipe.component';
 
+import { SummaryPipe } from './pipe/summary.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +25,8 @@ import { PipeComponent } from './pipe/pipe.component';
     VoterComponent,
     TwitterComponent,
     BuildInDirectivesComponent,
-    PipeComponent
+    PipeComponent,
+    SummaryPipe
   ],
   imports: [
     BrowserModule,

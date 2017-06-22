@@ -20,3 +20,24 @@
 <br/>
 <!-- Angular will simply call the two string method on this object which gives us [object Object] -->
 {{ course | json }}
+<br/>
+{{ post.title }}
+<br/>
+<!--extend the pipe to add other parameters -->
+{{ post.body | summary:10 }}
+<br/>
+<button 
+	[style.backgroundColor]="canSave ? 'blue' : 'gray'"
+	[style.color]="canSave ? 'white' : 'black'"
+	[style.fontWeight]="canSave ? 'bold' : 'normal'">
+	Click Here
+</button>
+<!-- Here we have too many style properties. Use ngStyle, like ngClass in favourite component -->
+<button 
+	[ngStyle]="{
+		backgroundColor: canSave ? 'blue' : 'gray',
+		color: canSave ? 'white' : 'black',
+		fontWeight: canSave ? 'bold' : 'normal'
+	}">
+Click Here
+</button>
