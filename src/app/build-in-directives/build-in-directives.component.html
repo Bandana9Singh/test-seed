@@ -37,8 +37,8 @@
 <div [ngSwitch]="viewMode">
 	<!-- template is HTML 5 tag, by default its hidden until activated-->
 	<!-- if value of viewMode=map first templte is activated. For viewMode=list, second template is activated -->
-	<div *ngSwitchCase="'map'">Map View Content</div>
-	<div *ngSwitchCase="'list'">List View Content</div>
+	<template *ngSwitchCase="'map'" ngSwitchDefault>Map View Content</template>
+	<template *ngSwitchCase="'list'">List View Content</template>
 </div>
 
 <!-- ngFor -->

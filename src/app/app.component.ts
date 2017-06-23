@@ -8,7 +8,6 @@ import { VoterComponent } from './voter/voter.component';
 import { TwitterComponent } from './twitter/twitter.component';
 import { BuildInDirectivesComponent } from './build-in-directives/build-in-directives.component';
 import { PipeComponent } from './pipe/pipe.component';
-import { BsPanelComponent } from './bs-panel/bs-panel.component';
 
 @Component({
   selector: 'app-root',
@@ -49,12 +48,6 @@ import { BsPanelComponent } from './bs-panel/bs-panel.component';
       <app-twitter></app-twitter>
       <app-build-in-directives></app-build-in-directives>
       <app-pipe></app-pipe>
-      <app-bs-panel>
-        <div class="panel-heading">This is panel heading</div>
-        <div class="panel-body">This is panel body</div>
-      </app-bs-panel>
-      <app-contact-form></app-contact-form>
-      <app-subscription></app-subscription>
     `
 })
 export class AppComponent {	title = "My first Angular App";

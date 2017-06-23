@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { TwitterComponent } from '../twitter.component';
 
-import { LikeComponent } from '../../like/like.component';
+import { LikeComponent } from '../like.component';
 import { Tweet } from './tweet';
 
 @NgModule({
@@ -13,6 +13,7 @@ import { Tweet } from './tweet';
   declarations: [
   	TwitterComponent,
   	LikeComponent,
+  	Tweet,
   	
   ],
   bootstrap: [TwitterComponent]
