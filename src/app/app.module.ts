@@ -12,6 +12,11 @@ import { VoterComponent } from './voter/voter.component';
 import { TwitterComponent } from './twitter/twitter.component';
 import { BuildInDirectivesComponent } from './build-in-directives/build-in-directives.component';
 import { PipeComponent } from './pipe/pipe.component';
+import { SummaryPipe } from './pipe/summary.pipe';
+import { BsPanelComponent } from './bs-panel/bs-panel.component';
+import { ZippyComponent } from './zippy/zippy.component';
+
+import { FormModule } from './form/form.module';
 
 @NgModule({
   declarations: [
@@ -23,11 +28,15 @@ import { PipeComponent } from './pipe/pipe.component';
     VoterComponent,
     TwitterComponent,
     BuildInDirectivesComponent,
-    PipeComponent
+    PipeComponent,
+    SummaryPipe,
+    BsPanelComponent,
+    ZippyComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    FormModule
   ],
   providers: [],
   bootstrap: [AppComponent]
