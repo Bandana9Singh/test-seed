@@ -55,6 +55,7 @@ import { BsPanelComponent } from './bs-panel/bs-panel.component';
       </app-bs-panel>
       <app-contact-form></app-contact-form>
       <app-subscription></app-subscription>
+      <app-signup-form></app-signup-form>
     `
 })
 export class AppComponent {	title = "My first Angular App";

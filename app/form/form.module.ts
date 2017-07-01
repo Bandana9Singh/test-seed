@@ -1,23 +1,27 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { SubscriptionComponent } from './subscription/subscription.component';
+import { SignupFormComponent } from './signup-form/signup-form.component';
 
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   declarations: [
    ContactFormComponent,
-   SubscriptionComponent
+   SubscriptionComponent,
+   SignupFormComponent
   ],
   bootstrap: [ContactFormComponent],
   exports: [
   	ContactFormComponent,
-  	SubscriptionComponent
+  	SubscriptionComponent,
+    SignupFormComponent
   ]
 })
 export class FormModule { 
